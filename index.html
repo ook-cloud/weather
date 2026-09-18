@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Цаг агаарын симуляци</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="weather-card">
+      <h2>Цаг агаарын мэдээ</h2>
+      <div class="search-box">
+        <select id="citySelect">
+          <option value="Улаанбаатар">Улаанбаатар</option>
+          <option value="Дархан">Дархан</option>
+          <option value="Эрдэнэт">Эрдэнэт</option>
+          <option value="Шинэ Дели">Шинэ Дели</option>
+          <option value="Токио">Токио</option>
+        </select>
+        <button id="getWeatherBtn">Харах</button>
+      </div>
+
+      <div class="weather-info" id="weatherInfo">
+        <h3 id="cityName">Улаанбаатар</h3>
+        <!-- Огноо болон цаг харуулах хэсэг -->
+        <p id="dateInfo" class="date-text"></p>
+
+        <div class="weather-icon" id="weatherIcon">☀️</div>
+        <div class="temp" id="temp">0°C</div>
+        <p id="description">Агаарын төлөв</p>
+
+        <div class="details">
+          <p>Чийгшил: <span id="humidity">0%</span></p>
+          <p>Салхины хурд: <span id="wind">0 м/с</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

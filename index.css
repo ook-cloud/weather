@@ -1,0 +1,71 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.weather-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 310px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+/* Огнооны стиль */
+.date-text {
+  font-size: 13px;
+  color: #777;
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+
+.weather-icon {
+  font-size: 50px;
+  margin: 5px 0;
+}
+
+.temp {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.details {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #555;
+}
