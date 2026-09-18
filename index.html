@@ -1,37 +1,39 @@
 <!doctype html>
-<html lang="mn">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Цаг агаарын симуляци</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <div class="weather-card">
-      <h2>Цаг агаарын мэдээ</h2>
+      <h2>Weather Forecast</h2>
+      . \\ Агаарын төлөв
       <div class="search-box">
         <select id="citySelect">
-          <option value="Улаанбаатар">Улаанбаатар</option>
-          <option value="Дархан">Дархан</option>
-          <option value="Эрдэнэт">Эрдэнэт</option>
-          <option value="Шинэ Дели">Шинэ Дели</option>
-          <option value="Токио">Токио</option>
+          <option value="Ulaanbaatar">Ulaanbaatar</option>
+          <option value="Moscow">Moscow</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Beijing">Beijing</option>
+          <option value="Seoul">Seoul</option>
         </select>
-        <button id="getWeatherBtn">Харах</button>
+        <button id="getWeatherBtn">Search</button>
       </div>
 
       <div class="weather-info" id="weatherInfo">
-        <h3 id="cityName">Улаанбаатар</h3>
-        <!-- Огноо болон цаг харуулах хэсэг -->
+        <h3 id="cityName">Ulaanbaatar</h3>
         <p id="dateInfo" class="date-text"></p>
 
         <div class="weather-icon" id="weatherIcon">☀️</div>
         <div class="temp" id="temp">0°C</div>
-        <p id="description">Агаарын төлөв</p>
+        <p id="description">Weather condition</p>
+        \\ Агаарын төлөв
 
         <div class="details">
-          <p>Чийгшил: <span id="humidity">0%</span></p>
-          <p>Салхины хурд: <span id="wind">0 м/с</span></p>
+          <p>Humidity: <span id="humidity">0%</span></p>
+          \\ Чийгшил
+          <p>Wind: <span id="wind">0 m/s</span></p>
         </div>
       </div>
     </div>
