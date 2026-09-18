@@ -8,6 +8,7 @@ const weatherDatabase = {
 
 const citySelect = document.getElementById("citySelect");
 const getWeatherBtn = document.getElementById("getWeatherBtn");
+
 const cityName = document.getElementById("cityName");
 const dateInfo = document.getElementById("dateInfo");
 const weatherIcon = document.getElementById("weatherIcon");
@@ -48,4 +49,7 @@ function showWeather() {
 }
 
 showWeather();
+
 getWeatherBtn.addEventListener("click", showWeather);
+
+citySelect.addEventListener("change", showWeather);
