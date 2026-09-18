@@ -1,4 +1,3 @@
-// HTML-ийн option value-тай яг адилхан Англи нэршилтэй болгов
 const weatherDatabase = {
   Ulaanbaatar: { baseTemp: -5, icon: "❄️", desc: "Cold and cloudy" },
   Moscow: { baseTemp: 2, icon: "🌨️", desc: "Light snow" },
@@ -7,19 +6,16 @@ const weatherDatabase = {
   Seoul: { baseTemp: 10, icon: "☀️", desc: "Sunny and clear" },
 };
 
-// HTML элементүүдээ авах
 const citySelect = document.getElementById("citySelect");
 const getWeatherBtn = document.getElementById("getWeatherBtn");
-
 const cityName = document.getElementById("cityName");
-const dateInfo = document.getElementById("dateInfo"); // Огнооны элемент
+const dateInfo = document.getElementById("dateInfo");
 const weatherIcon = document.getElementById("weatherIcon");
 const temp = document.getElementById("temp");
 const description = document.getElementById("description");
 const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 
-// Огноо форматыг Англиар гаргах
 function getCurrentDate() {
   const now = new Date();
   const options = {
@@ -35,7 +31,6 @@ function showWeather() {
   const selectedCity = citySelect.value;
   const cityData = weatherDatabase[selectedCity];
 
-  // Хотын мэдээлэл олдсон эсэхийг шалгах
   if (!cityData) return;
 
   const randomTempOffset = Math.floor(Math.random() * 5) - 2;
@@ -43,9 +38,8 @@ function showWeather() {
   const randomHumidity = Math.floor(Math.random() * 40) + 40;
   const randomWind = (Math.random() * 5 + 1).toFixed(1);
 
-  // HTML-ийг шинэчлэх
   cityName.textContent = selectedCity;
-  if (dateInfo) dateInfo.textContent = getCurrentDate(); // Огноо байвал шинэчилнэ
+  if (dateInfo) dateInfo.textContent = getCurrentDate();
   weatherIcon.textContent = cityData.icon;
   temp.textContent = `${currentTemp}°C`;
   description.textContent = cityData.desc;
@@ -53,6 +47,5 @@ function showWeather() {
   wind.textContent = `${randomWind} m/s`;
 }
 
-// Эхлэхэд болон Товч дарахад ажиллуулах
 showWeather();
 getWeatherBtn.addEventListener("click", showWeather);
